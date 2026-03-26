@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Roberto Beardo García — Estudiante ASIR, Sysadmin en formación y Militar en Activo.">
+    <title>Roberto Beardo García — Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <!-- EDITAR: Tu nombre o logo -->
+            <a href="#hero" class="nav-logo">PortFolio</a>
+
+            <div class="nav-links" id="nav-links">
+                <a href="#hero" class="nav-link active">Inicio</a>
+                <a href="#stack" class="nav-link">Stack</a>
+                <a href="#proyectos" class="nav-link">Proyectos</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
+            </div>
+
+            <div class="nav-actions">
+                <!-- Toggle dark/light -->
+                <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+
+                <!-- Hamburguesa mobile -->
+                <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <div class="hero-text">
+                <p class="hero-greeting">Hola, soy</p>
+                <h1 class="hero-name">Roberto Beardo García</h1>
+                <p class="hero-title">
+                    <span id="typed-text"></span><span class="cursor">|</span>
+                </p>
+                <p class="hero-description">
+                    <!-- EDITAR: Tu descripcion personal -->
+                    Actualmente trabajando para la Armada Española, tengo gran ambición y ganas de seguir formándome. Uno de mis objetivos es aprender el mundo del desarrollo. Apasionado por la tecnología y siempre en constante aprendizaje.
+                </p>
+                <div class="hero-actions">
+                    <!-- EDITAR: Enlace a tu CV en PDF -->
+                    <a href="assets/cv/CV_Roberto_Beardo.pdf" class="btn btn-primary" download>
+                        <i class="fas fa-download"></i> Descargar CV
+                    </a>
+                    <div class="hero-socials">
+                        <!-- EDITAR: Tus URLs de redes sociales -->
+                        <a href="https://github.com/RobertoBeardo" target="_blank" rel="noopener" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <!-- EDITAR: Pon tu URL de LinkedIn -->
+                        <a href="https://www.linkedin.com/in/roberto-beardo-garcia-799401348" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:robebeardo@gmail.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- EDITAR: Reemplaza assets/img/avatar.png con tu foto -->
+                <div class="avatar-wrapper">
+                    <img src="assets/img/avatar.jpg" alt="Roberto Beardo García"
+                         onerror="this.style.display='none'; this.parentElement.classList.add('avatar-fallback');">
+                    <span class="avatar-initials">RB</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== STACK TECNOLOGICO ========== -->
+    <section class="stack" id="stack">
+        <div class="section-container">
+            <h2 class="section-title fade-in">Stack Tecnológico</h2>
+            <p class="section-subtitle fade-in">Herramientas y tecnologías con las que trabajo</p>
+
+            <!-- Sistemas & Redes -->
+            <div class="stack-category fade-in">
+                <h3 class="stack-category-title">
+                    <i class="fas fa-network-wired"></i> Sistemas & Redes
+                </h3>
+                <div class="stack-grid">
+                    <div class="stack-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
+                             alt="Ubuntu Server" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="stack-fallback" style="display:none;">
+                            <i class="fab fa-ubuntu"></i>
+                        </span>
+                        <p>Ubuntu Server</p>
+                    </div>
+                    <div class="stack-item">
+                        <img src="https://img.icons8.com/color/96/windows-10.png"
+                             alt="Windows Server" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="stack-fallback" style="display:none;">
+                            <i class="fab fa-windows"></i>
+                        </span>
+                        <p>Windows Server</p>
+                    </div>
+                    <div class="stack-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Cisco_logo_blue_2016.svg"
+                             alt="Cisco Packet Tracer" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="stack-fallback" style="display:none;">
+                            <i class="fas fa-network-wired"></i>
+                        </span>
+                        <p>Cisco Packet Tracer</p>
+                    </div>
+                    <div class="stack-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Virtualbox_logo.png"
+                             alt="VirtualBox" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="stack-fallback" style="display:none;">
+                            <i class="fas fa-desktop"></i>
+                        </span>
+                        <p>VirtualBox</p>
+                    </div>
+                    <div class="stack-item">
+                        <span class="stack-fallback" style="display:flex;">
+                            <i class="fas fa-crosshairs"></i>
+                        </span>
+                        <p>Nmap</p>
+                    </div>
+                    <div class="stack-item">
+                        <span class="stack-fallback" style="display:flex;">
+                            <i class="fas fa-terminal"></i>
+                        </span>
+                        <p>Terminal</p>
+                    </div>
+                    <div class="stack-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                             alt="Docker" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="stack-fallback" style="display:none;">
+                            <i class="fab fa-docker"></i>
+                        </span>
+                        <p>Docker</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desarrollo -->
+            <div class="stack-category fade-in">
+                <h3 class="stack-category-title">
+                    <i class="fas fa-code"></i> Desarrollo
+                </h3>
+                <div class="stack-grid">
+                    <div class="stack-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                        <p>HTML</p>
+                    </div>
+                    <div class="stack-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                        <p>CSS</p>
+                    </div>
+                    <div class="stack-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                        <p>Python</p>
+                    </div>
+                    <div class="stack-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
+                        <p>PHP</p>
+                    </div>
+                    <div class="stack-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+                        <p>MySQL</p>
+                    </div>
+                    <div class="stack-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="WordPress">
+                        <p>WordPress</p>
+                    </div>
+                    <div class="stack-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                        <p>Git</p>
+                    </div>
+                    <div class="stack-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VSCode">
+                        <p>VSCode</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Aprendiendo -->
+            <div class="stack-category fade-in">
+                <h3 class="stack-category-title">
+                    <i class="fas fa-graduation-cap"></i> Aprendiendo
+                </h3>
+                <div class="stack-grid">
+                    <div class="stack-item stack-item--learning">
+                        <div class="learning-badge">
+                            <i class="fas fa-shield-halved"></i>
+                        </div>
+                        <p>Ciberseguridad</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROYECTOS ========== -->
+    <section class="proyectos" id="proyectos">
+        <div class="section-container">
+            <h2 class="section-title fade-in">Proyectos</h2>
+            <p class="section-subtitle fade-in">Algunos de mis trabajos y prácticas</p>
+
+            <div class="projects-grid">
+
+                <!-- Proyecto 1 -->
+                <article class="project-card fade-in">
+                    <div class="project-image">
+                        <img src="assets/img/proyectos/proyecto1.png" alt="Proyecto 1: Laboratorio de red"
+                             onerror="this.style.display='none';">
+                        <div class="project-placeholder">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Laboratorio de Red — 7 Hosts + Switch + Router</h3>
+                        <p class="project-description">
+                            Laboratorio de red en topología estrella: múltiples hosts conectados a un switch central, con un router como puerta de enlace hacia otras redes e Internet. Simulado con Cisco Packet Tracer y documentado en detalle.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Redes</span>
+                            <span class="tag">Cisco</span>
+                            <span class="tag">Topología</span>
+                            <span class="tag">LAN</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Proyecto 2 -->
+                <article class="project-card fade-in">
+                    <div class="project-image">
+                        <img src="assets/img/proyectos/ubuntu-server.png" alt="Instalación Ubuntu Server">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Instalación Ubuntu Server</h3>
+                        <p class="project-description">Instalación y distribución con usuarios, permisos y privilegios.</p>
+                        <div class="project-tags">
+                            <span class="tag">Redes</span>
+                            <span class="tag">Servidores</span>
+                            <span class="tag">Ubuntu</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Proyecto 3 -->
+                <article class="project-card fade-in">
+                    <div class="project-image">
+                        <img src="assets/img/proyectos/windows-server.png" alt="Instalación Windows Server">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Instalación Windows Server</h3>
+                        <p class="project-description">Instalación y distribución con usuarios, permisos y privilegios.</p>
+                        <div class="project-tags">
+                            <span class="tag">Redes</span>
+                            <span class="tag">Servidores</span>
+                            <span class="tag">Windows</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- AÑADIR PROYECTO 4 -->
+                <article class="project-card project-card--placeholder fade-in">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Próximo proyecto</h3>
+                        <p class="project-description">Pendiente a subir más proyectos.</p>
+                        <div class="project-tags">
+                            <span class="tag">Próximamente</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACTO ========== -->
+    <section class="contacto" id="contacto">
+        <div class="section-container">
+            <h2 class="section-title fade-in">Contacto</h2>
+            <p class="section-subtitle fade-in">¿Tienes alguna pregunta o propuesta? ¡Hablemos!</p>
+
+            <div class="contact-links fade-in">
+                <a href="mailto:robebeardo@gmail.com" class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>robebeardo@gmail.com</span>
+                </a>
+                <!-- EDITAR: Pon tu URL de LinkedIn -->
+                <a href="https://www.linkedin.com/in/roberto-beardo-garcia-799401348" target="_blank" rel="noopener" class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <!-- EDITAR: Pon tu URL de GitHub -->
+                <a href="https://github.com/rbeardo" target="_blank" rel="noopener" class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="section-container">
+            <p>&copy; 2026 Roberto Beardo García &middot; Estudiante ASIR &middot; Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
