@@ -515,6 +515,48 @@ img {
     height: 200px;
     overflow: hidden;
     background: var(--bg-secondary);
+    position: relative;
+}
+
+.badge-wip {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--accent);
+    background: rgba(10, 15, 30, 0.75);
+    border: 1px solid rgba(0, 194, 255, 0.35);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 2;
+    letter-spacing: 0.03em;
+}
+
+body.light .badge-wip {
+    background: rgba(240, 244, 255, 0.80);
+    border-color: rgba(27, 58, 107, 0.3);
+}
+
+.badge-wip::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    animation: pulse-dot 1.6s ease-in-out infinite;
+    flex-shrink: 0;
+}
+
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%       { opacity: 0.4; transform: scale(0.7); }
 }
 
 .project-image img {
